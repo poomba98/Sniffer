@@ -1,0 +1,15 @@
+C:\Users\админ\source\repos\Sniffer\Sniffer\bin\Debug\net6.0\Sniffer.exe
+C:\Users\админ\source\repos\Sniffer\Sniffer\bin\Debug\net6.0\Sniffer.deps.json
+C:\Users\админ\source\repos\Sniffer\Sniffer\bin\Debug\net6.0\Sniffer.runtimeconfig.json
+C:\Users\админ\source\repos\Sniffer\Sniffer\bin\Debug\net6.0\Sniffer.dll
+C:\Users\админ\source\repos\Sniffer\Sniffer\bin\Debug\net6.0\Sniffer.pdb
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.csproj.AssemblyReference.cache
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.AssemblyInfoInputs.cache
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.AssemblyInfo.cs
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.csproj.CoreCompileInputs.cache
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.dll
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\refint\Sniffer.dll
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.pdb
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\Sniffer.genruntimeconfig.cache
+C:\Users\админ\source\repos\Sniffer\Sniffer\obj\Debug\net6.0\ref\Sniffer.dll
