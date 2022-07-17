@@ -221,12 +221,13 @@ namespace Sniffer
                 case "udp":
                     udp udphead = new udp();
                     udphead.udphead(Data, MessageLength);
-                    log.WriteLine("UDP заголовок [Передающий порт:" + udphead.SourcePort + " Принимающий порт:" + udphead.DestinationPort + " Длина датаграммы:" + udphead.Length + " Контрольная сумма:" + udphead.Checksum);
+                    log.WriteLine("UDP заголовок [Передающий порт:" + udphead.SourcePort + " Принимающий порт:" + udphead.DestinationPort + " Длина датаграммы:" + udphead.Length + " Контрольная сумма:" + udphead.Checksum+"]");
                     break;
                 case "-1":
                     break;
 
             }
+            log.WriteLine();
             log.Close();
             snifsock.BeginReceive(byteData, 0, byteData.Length, SocketFlags.None, new AsyncCallback(OnReceive), null);
         }

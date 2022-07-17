@@ -8,23 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\админ\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\админ\\source\\repos\\Sniffer\\Sniffer\\Sniffer.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\тестовые\\Sniffer\\Sniffer\\Sniffer.csproj",
       "projectName": "Sniffer",
-      "projectPath": "C:\\Users\\админ\\source\\repos\\Sniffer\\Sniffer\\Sniffer.csproj",
-      "packagesPath": "C:\\Users\\админ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\админ\\source\\repos\\Sniffer\\Sniffer\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\тестовые\\Sniffer\\Sniffer\\Sniffer.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\тестовые\\Sniffer\\Sniffer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\админ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

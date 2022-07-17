@@ -28,40 +28,17 @@ namespace Sniffer
             {
                 MemoryStream memoryStream = new MemoryStream(byBuffer, 0, nReceived);
                 BinaryReader binaryReader = new BinaryReader(memoryStream);
-
-                //The first sixteen bits contain the source port
                 usSourcePort = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-
-                //The next sixteen contain the destiination port
                 usDestinationPort = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-
-                //Next thirty two have the sequence number
                 uiSequenceNumber = (uint)IPAddress.NetworkToHostOrder(binaryReader.ReadInt32());
-
-                //Next thirty two have the acknowledgement number
                 uiAcknowledgementNumber = (uint)IPAddress.NetworkToHostOrder(binaryReader.ReadInt32());
-
-                //The next sixteen bits hold the flags and the data offset
                 usDataOffsetAndFlags = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-
-                //The next sixteen contain the window size
                 usWindow = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-
-                //In the next sixteen we have the checksum
                 sChecksum = (short)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-
-                //The following sixteen contain the urgent pointer
                 usUrgentPointer = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-
-                //The data offset indicates where the data begins, so using it we
-                //calculate the header length
                 byHeaderLength = (byte)(usDataOffsetAndFlags >> 12);
                 byHeaderLength *= 4;
-
-                //Message length = Total length of the TCP packet - Header length
                 usMessageLength = (ushort)(nReceived - byHeaderLength);
-
-                //Copy the TCP data into the data buffer
                 Array.Copy(byBuffer, byHeaderLength, byTCPData, 0, nReceived - byHeaderLength);
             }
             catch (Exception ex)
@@ -97,9 +74,6 @@ namespace Sniffer
         {
             get
             {
-                //If the ACK flag is set then only we have a valid value in
-                //the acknowlegement field, so check for it beore returning 
-                //anything
                 if ((usDataOffsetAndFlags & 0x10) != 0)
                 {
                     return uiAcknowledgementNumber.ToString();
@@ -129,9 +103,6 @@ namespace Sniffer
         {
             get
             {
-                //If the URG flag is set then only we have a valid value in
-                //the urgent pointer field, so check for it beore returning 
-                //anything
                 if ((usDataOffsetAndFlags & 0x20) != 0)
                 {
                     return usUrgentPointer.ToString();
@@ -145,15 +116,9 @@ namespace Sniffer
         {
             get
             {
-                //The last six bits of the data offset and flags contain the
-                //control bits
-
-                //First we extract the flags
                 int nFlags = usDataOffsetAndFlags & 0x3F;
 
                 string strFlags = string.Format("0x{0:x2} (", nFlags);
-
-                //Now we start looking whether individual bits are set or not
                 if ((nFlags & 0x01) != 0)
                 {
                     strFlags += "FIN, ";
@@ -197,7 +162,6 @@ namespace Sniffer
         {
             get
             {
-                //Return the checksum in hexadecimal format
                 return string.Format("0x{0:x2}", sChecksum);
             }
         }
